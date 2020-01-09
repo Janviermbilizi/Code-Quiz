@@ -1,0 +1,39 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: #ffffff;
+}
+nav {
+  padding-top: 0;
+}
+.higherscores {
+  float: left;
+  margin-left: 20px;
+}
+.timectr {
+  float: right;
+  margin-right: 20px;
+}
+
+#minutes {
+  font-size: 3em;
+}
+#modal-container {
+  width: 80%;
+  background: #fefefe;
+  margin-top: auto;
+  border-color: gray;
+}
+
+#seconds {
+  font-size: 2em;
+}
+#section {
+  width: 100%;
+  text-align: center;
+  padding-top: 100px;
+}
+#quiz {
+  color: #ffffff;
+  background-color: purple;
+}
