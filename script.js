@@ -1,8 +1,9 @@
 var score = document.querySelector("#higherscores");
 var timeCounter = document.querySelector("#timectr");
 var startQuiz = document.querySelector("#quiz");
+var section1 = document.querySelector("#section1");
 var modalEl = document.querySelector("#modal-container");
-
+var currentIndex = 0;
 // list of all questions, choices, and answers
 var questions = [
   {
@@ -39,17 +40,64 @@ var questions = [
   }
 ];
 
+function startTimer(duration, display) {
+  var timer = duration,
+    minutes,
+    seconds;
+  setInterval(function() {
+    minutes = parseInt(timer / 60, 10);
+    seconds = parseInt(timer % 60, 10);
+
+    minutes = minutes < 10 ? "0" + minutes : minutes;
+    seconds = seconds < 10 ? "0" + seconds : seconds;
+
+    display.textContent = "Time: " + minutes + ":" + seconds;
+
+    if (--timer < 0) {
+      timer = duration;
+    }
+  }, 1000);
+}
+
+// $(document).ready(function () {
 startQuiz.addEventListener("click", function(event) {
   event.preventDefault();
-  var quiz1 = document.createElement("h3");
-  var quiz1 = document.querySelector(questions[0].title);
-  modalEl.appendChild(quiz1);
 
-  // var quiz1 = document.querySelector(questions[0].title.choices);
-  //var annswer1 = document.querySelector(questions[0].answer)
+  // startTimer()
+  var fiveMinutes = 60 * 5,
+    display = document.querySelector(".timectr");
+  startTimer(fiveMinutes, display);
+  section1.style.display = "none";
+
+  var title = questions[currentIndex].title;
+  var choices = questions[currentIndex].choices;
+
+  // title add attribute of element ul
+  var newh2 = document.createElement("h2");
+  newh2.innerText = title;
+
+  // append
+  modalEl.appendChild(newh2);
+  modalEl.style.display = "";
+
+  for (var x = 0; x < choices.length; x++) {
+    var thisCoice = choices[x];
+    var newh2 = document.createElement("h3");
+    newh2.innerText = thisCoice;
+    // append
+    modalEl.appendChild(newh2);
+  }
+  // choices add attribute element li
+  //append
 });
-
+// };
+// var quiz1 = document.querySelector(questions[0].title.choices);
+//var annswer1 = document.querySelector(questions[0].answer)
 //Close modal
+
+window.onload = function() {};
+
 function close() {
   modalEl.style.display = "none";
 }
+close();

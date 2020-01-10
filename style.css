@@ -19,7 +19,9 @@ nav {
   font-size: 3em;
 }
 #modal-container {
-  width: 80%;
+  width: 100%;
+  text-align: center;
+  padding-top: 100px;
   background: #fefefe;
   margin-top: auto;
   border-color: gray;
@@ -28,7 +30,7 @@ nav {
 #seconds {
   font-size: 2em;
 }
-#section {
+#section1 {
   width: 100%;
   text-align: center;
   padding-top: 100px;
