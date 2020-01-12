@@ -9,10 +9,12 @@ nav {
 .higherscores {
   float: left;
   margin-left: 20px;
+  font-size: 15px;
 }
 .timectr {
   float: right;
   margin-right: 20px;
+  font-size: 15px;
 }
 
 #minutes {
@@ -24,7 +26,6 @@ nav {
   padding-top: 100px;
   background: #fefefe;
   margin-top: auto;
-  border-color: gray;
 }
 
 #seconds {
@@ -35,7 +36,16 @@ nav {
   text-align: center;
   padding-top: 100px;
 }
+#end-screen {
+  width: 100%;
+  text-align: center;
+}
+
+p {
+  font-size: 18px;
+}
 #quiz {
   color: #ffffff;
-  background-color: purple;
+  background-color: teal;
+  font-size: 25px;
 }

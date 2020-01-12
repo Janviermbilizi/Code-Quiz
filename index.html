@@ -11,7 +11,7 @@
   </head>
   <body>
     <nav>
-      <h5 class="higherscores"></h5>
+      <h5 class="higherscores">View higherscores: 0</h5>
       <h5 class="timectr">
         Time: 05:00
       </h5>
@@ -27,7 +27,15 @@
       <button id="quiz">Start Quiz</button>
     </div>
     <div id="modal-container"></div>
+    <div id="end-screen" class="hide">
+      <h2>All done!</h2>
+      <p>Your final score is <span id="final-score"></span>.</p>
+      <p>
+        Enter initials: <input type="text" id="initials" max="3" />
+        <button id="submit">Submit</button>
+      </p>
+    </div>
+    <div id="feedback" class="feedback hide"></div>
     <script src="./script.js"></script>
   </body>
 </html>
-
